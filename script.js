@@ -95,7 +95,7 @@ function checkCode() {
   if (index !== -1) {
     const currentClue = document.getElementById(clues[index]);
     currentClue.classList.add("active");
-    document.getElementById("final").value = a3;
+    document.getElementById("final").textContent = a3;
     document.getElementById("codeWord").value = "";
     document.getElementById("error").textContent = "";
   } else {
