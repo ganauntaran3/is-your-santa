@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Quest</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f3f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow-y: scroll; /* Enable vertical scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for WebKit browsers (like Chrome and Safari) */
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 80%;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      h1 {
+        color: #ff3333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #333333;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      .quote {
+        font-style: italic;
+        margin-top: 40px;
+      }
+
+      #codeForm {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      #codeForm.active {
+        display: block;
+        opacity: 1;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        margin: 20px 0;
+        border: 2px solid #ff3333;
+        border-radius: 5px;
+        font-size: 1.2em;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+      }
+
+      button {
+        background-color: #ff3333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+      }
+
+      button:hover {
+        background-color: #d60000;
+      }
+
+      #error {
+        color: #ff3333;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .clueCard {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 10px;
+      }
+
+      .clueCard.active {
+        display: block;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="clueContainer">
+      <h1>🎄 Quest From Your Santa 🎅</h1>
+      <p>
+        Congratulations on your special journey! As you embark on this quest,
+        let the memories guide your way.
+      </p>
+      <div class="quote">
+        <b>"Behind the spot where promises were shared.</b>
+        <b>Close to where love's journey was celebrated.</b>
+        <b>Look where time stands still, captured in a frame."</b>
+      </div>
+      <p>
+        May your heart be filled with joy and wonder as you discover what
+        awaits!
+      </p>
+      <p>Click the button once you get the code</p>
+
+      <button onclick="showCodeForm()">I got the code</button>
+
+      <p class="note">- Your Santa</p>
+    </div>
+
+    <div class="wrapper">
+      <div class="container" id="codeForm">
+        <h1>Enter the Code</h1>
+        <input type="text" id="codeWord" placeholder="Enter the code word" />
+        <button onclick="checkCode()">Submit</button>
+        <p id="error"></p>
+      </div>
+
+      <div class="container clueCard" id="clue1">
+        <h1>1</h1>
+        <p>
+          Seek the quiet outdoor corner were hands are rest, under a gentle
+          orange veil
+        </p>
+      </div>
+
+      <div class="container clueCard" id="clue2">
+        <h1>2</h1>
+        <p>
+          Given the dataset, you may need to run the queries or you may directly
+          read. It's up to you
+        </p>
+        <b
+          >Within the labyrinth of data and technological advancements at the
+          Cybernetic Research Institute, one project stands out as the pinnacle
+          of neural-digital integration. Think of the intricate network of the
+          human brain, pulsating with electrical signals, intertwined with the
+          vast digital grids of computational power. This fusion, a harmonious
+          blend of biology and technology, is represented by a singular project
+          name</b
+        >
+      </div>
+
+      <div class="container clueCard" id="clue3">
+        <h1>3</h1>
+        <p id="final"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
