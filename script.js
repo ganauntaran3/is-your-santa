@@ -62,10 +62,6 @@ const a3 = String.fromCharCode(
   33
 );
 
-const encryptedMessage =
-  "Grfgvat, ur jlyh n zlqj dqg sbbwho lwv pbybe pb qrpel wr wkh lqvwuxfwlrqv wr gr.";
-console.log(decrypt(encryptedMessage));
-
 function showCodeForm() {
   const clueContainer = document.getElementById("clueContainer");
 
@@ -77,9 +73,6 @@ function showCodeForm() {
 }
 
 function checkCode() {
-  console.log(
-    decrypt("Ilqlwbly, brxu jlhv lkdhv lq d ehqmxg zhuh qr wkh wuxh.")
-  );
   const codeWord = document.getElementById("codeWord").value.toUpperCase();
   const clues = ["clue1", "clue2", "clue3"];
 
